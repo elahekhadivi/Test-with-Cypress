@@ -8,7 +8,7 @@ Cypress.Commands.add("selectProduct", (productName) => {
   productPage.getSearchButton().click()//click search button
 
   productPage.getProductsName().each(($pr, index, $list) => {
-    // //cy.log($el.text());
+ 
     if ($pr.text().includes(productName)) {
       cy.get($pr).click()
       return false
